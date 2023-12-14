@@ -1,0 +1,19 @@
+n = int(input())
+
+a = {}
+b = set()
+base = 1
+
+for i in range(1, n+1):
+    b.add(i)
+
+for i in range(n):
+    c = input()
+    if c == 'C':
+        a[base] = b.pop()
+        print(a[base])
+        base += 1
+    else:
+        tt = int(input())
+        b.add(a[tt])
+        del a[tt]
